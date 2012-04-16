@@ -8,7 +8,7 @@ echo "Downloading a script that finds the latest downloads for your apps ..."
   curl -Os https://raw.github.com/molawson/laptop/master/lib/latest_release.rb
 
 echo "Installing the Mechanize gem that helps find the latest downloads for your apps ..."
-  gem install mechanize
+  gem install mechanize --no-ri --no-rdoc
 
 echo "Downloading Dropbox ..."
   curl -Ls https://www.dropbox.com/download?plat=mac > Dropbox.dmg

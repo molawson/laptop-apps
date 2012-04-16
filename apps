@@ -40,7 +40,7 @@ echo "Downloading GitX ..."
 echo "--------------------------------------------------------"
 echo "Google Chrome needs to be downloaded from a web browser."
 echo "--------------------------------------------------------"
-read -p "Would you like to do that now [y/n] " chrome
+read -p "Would you like to do that now? [y/n] " chrome
 if [ $chrome == "Y" -o $chrome == "y" ] ; then
   open https://www.google.com/chrome/
   read -p "Press ENTER to continue. " cont
@@ -55,7 +55,7 @@ echo "Downloading Propane for Campfire ..."
 echo "------------------------------------------------"
 echo "Skype needs to be downloaded from a web browser."
 echo "------------------------------------------------"
-read -p "Would you like to do that now [y/n] " skype
+read -p "Would you like to do that now? [y/n] " skype
 if [ $skype == "Y" -o $skype == "y" ] ; then
   open http://www.skype.com/go/downloading
   read -p "Press ENTER to continue. " cont
@@ -69,3 +69,5 @@ echo "Downloading Transmit ..."
   
 echo "Cleaning up ..."
   rm latest_release.rb
+
+echo "Done."

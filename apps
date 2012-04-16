@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 echo "Creating an Apps directory on your Desktop ..."
-  mkdir ~/Desktop/Apps
+  mkdir -p ~/Desktop/Apps
   cd ~/Desktop/Apps
 
 echo "Downloading a script that finds the latest downloads for your apps ..."
-  curl -Os https://raw.github.com/molawson/laptop/master/lib/latest_release.rb
+  curl -Os https://raw.github.com/molawson/laptop-apps/master/lib/latest_release.rb
 
 echo "Installing the Mechanize gem that helps find the latest downloads for your apps ..."
   gem install mechanize --no-ri --no-rdoc
@@ -14,10 +14,11 @@ echo "Downloading Dropbox ..."
   curl -Ls https://www.dropbox.com/download?plat=mac > Dropbox.dmg
 
 echo -e "This would be a good time to setup Dropbox so it can start downloading your files.\nWould you like to do that now? [y/n]"
-read x
-if [ $x == "Y" -o $x == "y" ] ; then
+read dropbox
+if [ $dropbox == "Y" -o $dropbox == "y" ] ; then
   open ~/Desktop/Apps/Dropbox.dmg
   echo -e "Press ENTER to continue."
+  read cont
 fi
 
 echo "Downloading 1Password ..."
@@ -36,10 +37,11 @@ echo "Downloading GitX ..."
   curl -Os http://frim.frim.nl/GitXStable.app.zip
 
 echo "Google Chrome needs to be downloaded from a web browser.\nWould you like to do that now [y/n]"
-read y
-if [ $y == "Y" -o $y == "y" ] ; then
+read chrome 
+if [ $chrome == "Y" -o $chrome == "y" ] ; then
   open https://www.google.com/chrome/
   echo -e "Press ENTER to continue."
+  read cont
 fi
 
 echo "Downloading MockSMTP ..."
@@ -49,10 +51,11 @@ echo "Downloading Propane for Campfire ..."
   curl -Os http://propaneapp.com/appcast/Propane.zip
 
 echo "Skype needs to be downloaded from a web browser.\nWould you like to do that now [y/n]"
-read z
-if [ $z == "Y" -o $z == "y" ] ; then
+read skype 
+if [ $skype == "Y" -o $skype == "y" ] ; then
   open http://www.skype.com/go/downloading
   echo -e "Press ENTER to continue."
+  read cont
 fi
 
 echo "Downloading Spotify ..."

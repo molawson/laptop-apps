@@ -13,6 +13,7 @@ echo "Installing the Mechanize gem that helps find the latest downloads for your
 echo "Downloading Dropbox ..."
   curl -Ls https://www.dropbox.com/download?plat=mac > Dropbox.dmg
 
+echo "----------------------------------------------------------------------------------"
 echo "This would be a good time to setup Dropbox so it can start downloading your files."
 read -p "Would you like to do that now? [y/n] " dropbox
 if [ $dropbox == "Y" -o $dropbox == "y" ] ; then
@@ -35,6 +36,7 @@ echo "Downloading Firefox ..."
 echo "Downloading GitX ..."
   curl -Os http://frim.frim.nl/GitXStable.app.zip
 
+echo "--------------------------------------------------------"
 echo "Google Chrome needs to be downloaded from a web browser."
 read -p "Would you like to do that now [y/n] " chrome
 if [ $chrome == "Y" -o $chrome == "y" ] ; then
@@ -48,6 +50,7 @@ echo "Downloading MockSMTP ..."
 echo "Downloading Propane for Campfire ..."
   curl -Os http://propaneapp.com/appcast/Propane.zip
 
+echo "------------------------------------------------"
 echo "Skype needs to be downloaded from a web browser."
 read -p "Would you like to do that now [y/n] " skype
 if [ $skype == "Y" -o $skype == "y" ] ; then

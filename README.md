@@ -11,6 +11,7 @@ This script is meant to be run after [Laptop](https://github.com/molawson/laptop
 It should be able to run in a number of other environments, but it hasn't been tested without the Laptop script. The following dependencies are necessary and should come installed (in some version) on any new Mac:
 
 * Bash
+* Curl
 * Ruby
 * RubyGems
 
@@ -19,7 +20,7 @@ Download
 
 Run the script:
 
-    bash < <(curl -s https://raw.github.com/molawson/laptop-apps/master/apps)
+    curl -Os https://raw.github.com/molawson/laptop-apps/master/apps ; bash apps
 
 What it downloads
 -----------------

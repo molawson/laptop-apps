@@ -23,6 +23,11 @@ class LatestRelease
     puts @agent.page.link_with(:href => /cachefly/).href
   end
 
+  def app_cleaner
+    @agent.get("http://www.freemacsoft.net/appcleaner")
+    puts @agent.page.search(".downloads li.dark a").attribute("href").value.gsub("..","http://www.freemacsoft.net")
+  end
+
   def firefox
     @agent.get("http://www.mozilla.org/en-US/firefox/new/")
     puts @agent.page.search(".download-list .os_osx a").first.attribute("data-direct-link").value

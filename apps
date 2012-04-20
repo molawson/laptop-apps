@@ -27,6 +27,9 @@ echo "Downloading 1Password ..."
 
 echo "Downloading Alfred ..."
   curl -Os "$(ruby latest_release.rb alfred)" 
+
+echo "Downloading AppCleaner ..."
+  curl -Os "$(ruby latest_release.rb app_cleaner)" 
   
 echo "Downloading Carbon Copy Cloner ..."
   curl -Ls http://www.bombich.com/software/download_ccc.php > ccc.dmg

@@ -52,9 +52,6 @@ fi
 echo "Downloading MockSMTP ..."
   curl -Ls http://mocksmtpapp.com/download > MockSMTP.zip
 
-echo "Downloading Propane for Campfire ..."
-  curl -Os http://propaneapp.com/appcast/Propane.zip
-
 echo "------------------------------------------------"
 echo "Skype needs to be downloaded from a web browser."
 echo "------------------------------------------------"
@@ -63,6 +60,9 @@ if [ $skype == "Y" -o $skype == "y" ] ; then
   open http://www.skype.com/go/downloading
   read -p "Press ENTER to continue. " cont
 fi
+
+echo "Downloading Spanning Sync ..."
+  curl -Ls http://spanningsync.com/download > Spanning-Sync.dmg
 
 echo "Downloading Spotify ..."
   curl -Os http://download.spotify.com/Spotify.dmg

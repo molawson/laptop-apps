@@ -67,9 +67,6 @@ if [ $skype == "Y" -o $skype == "y" ] ; then
   read -p "Press ENTER to continue. " cont
 fi
 
-echo "Downloading Spanning Sync ..."
-  curl -Ls http://spanningsync.com/download > Spanning-Sync.dmg
-
 echo "Downloading Spotify ..."
   curl -Os http://download.spotify.com/Spotify.dmg
 

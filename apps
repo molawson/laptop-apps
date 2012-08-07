@@ -31,8 +31,14 @@ echo "Downloading Alfred ..."
 echo "Downloading AppCleaner ..."
   curl -Os "$(ruby latest_release.rb app_cleaner)" 
   
-echo "Downloading Carbon Copy Cloner ..."
-  curl -Ls http://www.bombich.com/software/download_ccc.php > ccc.dmg
+echo "-------------------------------------------------------------"
+echo "Carbon Copy Cloner needs to be downloaded from a web browser."
+echo "-------------------------------------------------------------"
+read -p "Would you like to do that now? [y/n] " ccc
+if [ $ccc == "Y" -o $ccc == "y" ] ; then
+  open http://www.bombich.com/
+  read -p "Press ENTER to continue. " cont
+fi
 
 echo "Downloading Firefox ..."
   curl -Os "$(ruby latest_release.rb firefox)" 

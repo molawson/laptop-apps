@@ -36,6 +36,6 @@ What it downloads
 * Google Chrome (for browsing the web and testing development projects)
 * MockSMTP (for testing email delivery in development)
 * Skype (for global text, voice, and video chat)
-* Spanning Sync (for better syncing of Google calendar and contacts)
 * Spotify (for listening to music)
 * Transmit (for using FTP/SFTP to transfer files)
+* Tweetbot (for Twitter)

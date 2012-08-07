@@ -72,8 +72,11 @@ echo "Downloading Spotify ..."
 
 echo "Downloading Transmit ..."
   curl -Os "$(ruby latest_release.rb transmit)" 
+
+echo "Downloading Tweetbot ..."
+  curl -Os "$(ruby latest_release.rb tweetbot)" 
   
 echo "Cleaning up ..."
   rm latest_release.rb
 
-echo "Done."
+echo "\nDone.\n"

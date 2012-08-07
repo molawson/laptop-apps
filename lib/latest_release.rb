@@ -38,6 +38,11 @@ class LatestRelease
     puts @agent.page.search("#downloadButton").attribute("href").value
   end 
 
+  def tweetbot
+    @agent.get("http://tapbots.com/tweetbot_mac/")
+    puts @agent.page.search("#download a").first.attribute("href").value
+  end
+
 end
 
 l = LatestRelease.new
